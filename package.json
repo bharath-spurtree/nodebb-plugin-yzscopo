@@ -1,0 +1,58 @@
+{
+  "name": "nodebb-plugin-yzscopo",
+  "version": "5.8.10",
+  "description": "Write-enabled API for NodeBB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/julianlam/nodebb-plugin-yzscopo"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "write",
+    "API",
+    "REST",
+    "JSON"
+  ],
+  "author": "Julian Lam <julian@nodebb.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julianlam/nodebb-plugin-yzscopo/issues"
+  },
+  "homepage": "https://github.com/julianlam/nodebb-plugin-yzscopo",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "markdown-it": "^8.4.1",
+    "passport-http-bearer": "^1.0.1"
+  },
+  "nbbpm": {
+    "compatibility": "^1.17.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-angular": "^7.1.2",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^2.4.0",
+    "lint-staged": "^10.0.9"
+  }
+}
